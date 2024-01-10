@@ -1,0 +1,25 @@
+{
+  "cortex-debug.openocdPath": "C:/Utilities/OpenOCD-Pico/openocd.exe",
+  "cortex-debug.gdbPath": "arm-none-eabi-gdb",
+
+  // These settings tweaks to the cmake plugin will ensure
+  // that you debug using cortex-debug instead of trying to launch
+  // a Pico binary on the host
+  "cmake.options.statusBarVisibility": "compact",
+  "cmake.options.advanced": {
+    "debug": { "statusBarVisibility": "hidden" },
+    "launch": { "statusBarVisibility": "hidden" }
+  },
+  "cmake.generator": "NMake Makefiles",
+  //    "cmake.buildBeforeRun": true,
+  "cmake.configureOnOpen": true,
+  "files.associations": {
+    "time.h": "c",
+    "timer.h": "c"
+  }
+  //    "cmake.configureSettings": {
+  //      "CMAKE_MODULE_PATH": "${env:PICO_INSTALL_PATH}/pico-sdk-tools"
+  //    },
+
+  //    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}
